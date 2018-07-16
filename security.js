@@ -76,3 +76,17 @@ const encrypt = (message) => {
 const decrypt = (encryptedMessage) => {
     return decryptor(encryptedMessage, privteKey) // returns original message
 }
+
+
+
+// Types of Cybersecurity Attacks
+// Common Types of Cybersecurity Attacks
+// Phishing Attacks
+// SQL Injection Attacks(SQLi)
+// Cross - Site Scripting(XSS)
+// Man -in -the - Middle(MITM) Attacks
+// Malware Attacks
+// Denial - of - Service Attacks
+// Spear Phishing Attacks
+// Whaling Phishing Attacks
+// Brute - Force and Dictionary Attacks

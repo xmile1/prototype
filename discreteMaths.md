@@ -1,0 +1,1 @@
+<!-- Logic is the study of consequence. Given a few mathematical statements or facts, we would like to be able to draw some conclusions. -->
