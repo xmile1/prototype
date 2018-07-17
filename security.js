@@ -1,6 +1,5 @@
 // /.+\.invisionapp\.com|.+\.invision\.works|.+\.invisionbeta\.com/g
 // there is also a common sanitize regex used
-// 
 
 // https://www.rapid7.com/fundamentals/cross-site-scripting/
 
@@ -59,6 +58,7 @@ const authorize = (credentials)=>{
 
 
 
+hashing 
 const hash = (data) => {
     return scrambleTheDataForever(data, salt)
 }

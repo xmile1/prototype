@@ -1,6 +1,7 @@
-// DIP keeps high - level modules from knowing the details of its low - level modules and setting them up.
+// DIP keeps high-level modules from knowing the details of its low-level modules and setting them up.
 //It can accomplish this through DI.A huge benefit of this is that it reduces the coupling between modules.
 // Coupling is a very bad development pattern because it makes your code hard to refactor.
+// Be LOOSELY COUPLED
 
 
 

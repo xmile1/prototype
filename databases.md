@@ -1,13 +1,11 @@
 - Relational databases are designed to run on a single server in order to maintain the integrity of the table mappings 
-and avoid the problems of distributed computing.With this design, 
+and avoid the problems of distributed computing.
 - if a system needs to scale, customers must buy bigger, more complex, and more expensive proprietary hardware with more processing power, 
 memory, and storage.
 - Upgrades are also a challenge, as the organization must go through a lengthy acquisition process, 
 and then often take the system offline to actually make the change.
 - This is all happening while the number of users continues to increase, 
 causing more and more strain and increased risk on the under - provisioned resources.
-
-
 
 
 - NoSQL databases, on the other hand, usually support auto-sharding, meaning that they natively and automatically spread data across an arbitrary number of servers, without requiring the application to even be aware of the composition of the server pool.
@@ -148,8 +146,6 @@ It abstracts
 // ACID
 ##Atomicity
 if any of the statements constituting a transaction fails to complete, the entire transaction fails and the database is left unchanged
-
-// Main article: Atomicity(database systems)
 // Transactions are often composed of multiple statements.Atomicity guarantees that each transaction is treated as a single "unit", which either succeeds completely, or fails completely: if any of the statements constituting a transaction fails to complete, the entire transaction fails and the database is left unchanged.An atomic system must guarantee atomicity in each and every situation, including power failures, errors and crashes.
 
 ##Consistency
@@ -160,8 +156,6 @@ Consistency ensures that a transaction can only bring the database from one vali
 ##Isolation
 Each transaction occurs either before or after every other transaction and the view of the database that a transaction sees at its beginning is only altered by the transaction itself before its conclusion.No transaction should ever see the intermediate product of another transaction.
 
-
-// Main article: Isolation(database systems)
 // Transactions are often executed concurrently(eg.reading and writing to multiple tables at the same time).Isolation ensures that concurrent execution of transactions leaves the database in the same state that would've been obtained if the transactions were executed sequentially. Isolation is the main goal of concurrency control; depending on the method used, the effects of an incomplete transaction might not even be visible to other transactions.
 // The database engine enforces isolation between multiple transactions occurring at or near the same time.Each transaction occurs either before or after every other transaction and the view of the database that a transaction sees at its beginning is only altered by the transaction itself before its conclusion.No transaction should ever see the intermediate product of another transaction.
 

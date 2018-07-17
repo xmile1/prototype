@@ -1,1 +1,2 @@
-<!-- Logic is the study of consequence. Given a few mathematical statements or facts, we would like to be able to draw some conclusions. -->
+Logic is the study of consequence. Given a few mathematical statements or facts, we would like to be able to draw some conclusions.
+logic aims to determine in which cases a conclusion is, or is not, a consequence of a set of premises.

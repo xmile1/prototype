@@ -11,6 +11,7 @@ class AssessMeNoSRP {
 
 
 // AssessMe Refartored to SRP
+// enforces that a class/component performs a single responsibility.
 
 class AssessMe {
     static assess(fellows) {

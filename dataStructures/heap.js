@@ -1,4 +1,6 @@
 // a heap is a specialized tree - based data structure that satisfies the heap property,
+// Parent node is always greater than child - Max Heap    - smallest down and largest up
+// Child is alwas greater than parent - Min heap   - smallest up and largest down.
 
 // But the job it does is optimized algorithms by providing a means for efficient Min - Max of Lists and Arrays.
 

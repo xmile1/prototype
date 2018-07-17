@@ -1,6 +1,14 @@
+// Tree is basically a collection of nodes with each node having a value and also a list of references to other nodes.All trees have a root node.There are different types of tree data structures including binary tree which in itself has a list of variants such as the binary search tree, Binary tries, hash trees etc.
+
+// key in each node must be greater than or equal to any key stored in the left sub - tree, and less than or equal to any key stored in the right 
+
 // Search Operation - O(n)
 // Insertion Operation - O(1)
 // Deletion Operation - O(n)
+
+// use
+// Unix kernels for managing a set of virtual memory areas
+// implement multilevel indexing in DATABASE.
 
 
 class BinarySearchTree {

@@ -64,3 +64,19 @@ const fellow = new Fellow({
         }
     }
 })
+
+
+const shapeInterface = (state) => ({
+    type: 'shapeInterface',
+    area: () => state.area(state),
+    volume: () => state.volume(state)
+})
+
+const shapeInterface = (state) => ({
+    type: 'shapeInterface',
+    area: () => state.area(state)
+})
+const solidShapeInterface = (state) => ({
+    type: 'solidShapeInterface',
+    volume: () => state.volume(state)
+})

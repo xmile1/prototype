@@ -1,3 +1,10 @@
+
+
+
+# Example of Tree Data Structure
+# Items in folder
+
+
 Depth First = O(n)
 
 
