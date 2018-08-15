@@ -1,3 +1,86 @@
+
+
+## Security for DB
+- Ensure Physical Database Security
+- Use Web Application and Database Firewalls
+- Harden Your Database to Fullest Extent Possible
+- up-to-date version of db software
+- Encrypt Your Data
+- confidential data is encrypted in motion over your network to protect against database security threats
+- It's also important to uninstall or disable any features or services that you don't need to use, and ensure that you change the passwords of any default accounts from their default values - or better still, delete any default accounts that you don't need.
+- Finally, ensure that all database security controls provided by the database are enabled(most are enabled by default ) unless there is a specific reason for any to be disabled.
+- ensure that you are not storing any confidential information that doesn't need to be there
+- Manage Database Access Tightly
+- Accounts should be locked after three or four login attempts
+- Audit and Monitor Database Activity
+
+
+
+
+## How to optimize complex queries
+// Use indexing
+// A database index is a data structure that improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space to maintain the index data structure.Indexes are used to quickly locate data without having to search every row in a database table every time a database table is accessed.Indexes can be created using one or more columns of a database table, providing the basis for both rapid random lookups and efficient access of ordered records.
+
+// Only Retrieve the Data You Really Need, Select only columns you need
+// Similarly, if you only need a limited number of rows you should use the LIMIT clause(or your database’s equivalent).Take a look at the following code:
+
+// Avoid using functions in predicates.
+// The index is not used by the database if there is a function on the column.For example:
+// SELECT * FROM TABLE1 WHERE UPPER(COL1) = 'ABC'
+
+// Avoid subqueries
+// SELECT user_id, last_name FROM users WHERE EXISTS (SELECT * FROM donationuser WHERE donationuser.user_id = users.user_id);
+// SELECT DISTINCT users.user_id FROM users INNER JOIN donationuser ON users.user_id = donationuser.user_id;
+
+// The use of the % wildcard at the beginning of the LIKE pattern will prevent the database from using a suitable index if such exists. Since the system doesn’t know what the beginning of the name column is, it will have to perform a full table scan anyway. In many cases, this may slow the query execution. If the query can be rewritten in the following way:
+// SELECT * FROM users WHERE name LIKE '%bar%';
+// SELECT * FROM users WHERE name LIKE 'bar%';
+
+// Create Joins with INNER JOIN Rather than WHERE
+
+// SELECT Customers.CustomerID, Customers.Name, Sales.LastSaleDate
+// FROM Customers, Sales
+// WHERE Customers.CustomerID = Sales.CustomerID
+// gets all the records and filters it
+
+// SELECT Customers.CustomerID, Customers.Name, Sales.LastSaleDate
+// FROM Customers
+// INNER JOIN Sales
+// ON Customers.CustomerID = Sales.CustomerID
+// will only get the exact results
+
+// Run Analytical Queries During Off - Peak Times
+
+
+// INNER JOIN
+// The following SQL statement selects all orders with customer information:
+
+// LEFT JOIN
+// Selects all in the left table columns and add any available from the right table data and null if no data
+
+// RIGHT JOIN
+// opposite of left join
+
+// FULL JOIN
+// selects all from both and sets null where neccessary
+
+// The UNION operator is used to combine the result - set of two or more SELECT statements.
+
+// Each SELECT statement within UNION must have the same number of columns
+// The columns must also have similar data types
+// The columns in each SELECT statement must also be in the same order
+
+
+
+
+
+
+
+
+
+
+
+
 - Relational databases are designed to run on a single server in order to maintain the integrity of the table mappings 
 and avoid the problems of distributed computing.
 - if a system needs to scale, customers must buy bigger, more complex, and more expensive proprietary hardware with more processing power, 

@@ -1,0 +1,27 @@
+Ngixn is an open source web server and reverse proxy that is used to make scaling applications easier with less configuration.
+
+it can be used for load balancing using one of Round-robin, least_conn, ip_hash
+used for caching
+
+create 4 node servers on four ports
+
+## Nginx config 
+upstream my_http_servers {
+    least_conn;
+    server 127.0.0.1:444;      # httpServer1 listens to port 444
+    server 127.0.0.1:445;      # httpServer2 listens to port 445
+    server 127.0.0.1:446;      # httpServer3 listens to port 446
+    server 127.0.0.1:447;      # httpServer4 listens to port 447
+}
+server {
+    proxy_cache_path /tmp/NGINX_cache/ keys_zone=backcache:10m;
+    listen 80;
+    server_name your-domain.com www.your-domain.com;
+    location / {
+        proxy_set_header   X-Real-IP $remote_addr;
+        proxy_set_header   Host      $http_host;
+        proxy_pass         http://my_http_servers;
+        proxy_cache        backcache;
+    }
+}
+
